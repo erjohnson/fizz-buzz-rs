@@ -12,7 +12,7 @@ fn main() {
     num % 15 == 0
   }
 
-  for i in range(1i, 100) {
+  for i in range(1i, 101) {
     if div_by_fifteen(i) { 
       println!("FizzBuzz"); 
     } else if div_by_three(i) { 
