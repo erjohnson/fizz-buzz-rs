@@ -6,6 +6,10 @@ fn div_by_five(num: int) -> bool {
   num % 5 == 0
 }
 
+fn div_by_fifteen(num: int) -> bool {
+  num % 15 == 0
+}
+
 #[test]
 fn test_div_by_three() {
     let num = 1;
@@ -33,5 +37,20 @@ fn test_div_by_five() {
 fn test_div_by_five_with_five() {
     if !div_by_five(5) {
         fail!("Five should be five");
+    }
+}
+
+#[test]
+fn test_div_by_fifteen() {
+    let num = 1;
+    if div_by_fifteen(num) {
+        fail!("{} is not a multiple of 15", num);
+    }
+}
+
+#[test]
+fn test_div_by_fifteen_with_fifteen() {
+    if !div_by_fifteen(15) {
+        fail!("Fifteen should be fifteen");
     }
 }
